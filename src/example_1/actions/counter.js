@@ -2,7 +2,7 @@
  * @Author: Sussertod
  * @Date:   2016-09-05 12:51:00
  * @Last Modified by:   Sussertod
- * @Last Modified time: 2016-09-05 12:55:46
+ * @Last Modified time: 2016-09-05 14:10:51
  */
 
 'use strict';
@@ -20,6 +20,10 @@ export function increment() {
     };
 }
 
+/**
+ * 减法
+ * @return {[type]} [description]
+ */
 export function decrement() {
     return {
         type: DECREMENT_COUNTER
