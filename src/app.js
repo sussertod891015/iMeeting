@@ -2,10 +2,11 @@
  * @Author: Sussertod
  * @Date:   2016-09-04 23:06:33
  * @Last Modified by:   Sussertod
- * @Last Modified time: 2016-09-05 10:51:25
+ * @Last Modified time: 2016-09-05 13:15:00
  */
 
 'use strict';
+import 'normalize.css';
 
 /**
  * example_0
@@ -37,15 +38,21 @@
 /**
  * example_1
  */
-import React, {
-    Component
-} from 'react';
+import React from 'react'
 import {
     render
-} from 'react-dom';
-import {
-    createStore
-} from 'redux';
+} from 'react-dom'
 import {
     Provider
-} from 'react-redux';
+} from 'react-redux'
+import App from './example_1/containers/App'
+import configureStore from './example_1/store/configureStore'
+
+const store = configureStore();
+
+render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('app')
+)
