@@ -1,26 +1,51 @@
 /*
  * @Author: Sussertod
- * @Date:   2016-09-02 12:45:03
+ * @Date:   2016-09-04 23:06:33
  * @Last Modified by:   Sussertod
- * @Last Modified time: 2016-09-02 14:18:24
+ * @Last Modified time: 2016-09-05 10:51:25
  */
 
 'use strict';
+
+/**
+ * example_0
+ */
+
+// import React from 'react'
+// import {
+//     render
+// } from 'react-dom'
+// import {
+//     createStore
+// } from 'redux'
+// import {
+//     Provider
+// } from 'react-redux'
+// import App from './example_0/container'
+// import todoApp from './example_0/reducers'
+
+// let store = createStore(todoApp)
+
+// let rootElement = document.getElementById('app')
+// render(
+//     <Provider store={store}>
+//         <App />
+//     </Provider>,
+//     rootElement
+// )
+
+/**
+ * example_1
+ */
 import React, {
     Component
 } from 'react';
-import ReactDOM from 'react-dom';
-import 'normalize.css'
 import {
-    connect
+    render
+} from 'react-dom';
+import {
+    createStore
+} from 'redux';
+import {
+    Provider
 } from 'react-redux';
-
-console.log(Router);
-
-export class Counter extends Component {
-    render() {
-        return (
-            <div></div>
-        );
-    }
-}
