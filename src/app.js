@@ -2,7 +2,7 @@
  * @Author: Sussertod
  * @Date:   2016-09-04 23:06:33
  * @Last Modified by:   Sussertod
- * @Last Modified time: 2016-09-05 13:15:00
+ * @Last Modified time: 2016-09-05 15:00:50
  */
 
 'use strict';
@@ -38,6 +38,30 @@ import 'normalize.css';
 /**
  * example_1
  */
+// import React from 'react'
+// import {
+//     render
+// } from 'react-dom'
+// import {
+//     Provider
+// } from 'react-redux'
+// import App from './example_1/containers/App'
+// import configureStore from './example_1/store/configureStore'
+
+// const store = configureStore();
+
+// render(
+//     <Provider store={store}>
+//         <App />
+//     </Provider>,
+//     document.getElementById('app')
+// )
+
+
+
+/**
+ * practice_0
+ */
 import React from 'react'
 import {
     render
@@ -45,8 +69,8 @@ import {
 import {
     Provider
 } from 'react-redux'
-import App from './example_1/containers/App'
-import configureStore from './example_1/store/configureStore'
+import App from './practice_0/containers/App'
+import configureStore from './practice_0/store/configureStore'
 
 const store = configureStore();
 

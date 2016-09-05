@@ -1,15 +1,17 @@
 /*
  * @Author: Sussertod
- * @Date:   2016-09-05 12:56:25
+ * @Date:   2016-09-05 14:11:34
  * @Last Modified by:   Sussertod
- * @Last Modified time: 2016-09-05 14:55:05
+ * @Last Modified time: 2016-09-05 15:29:42
  */
 
 'use strict';
+
 import {
     INCREMENT_COUNTER,
-    DECREMENT_COUNTER
-} from '../actions/counter';
+    DECREMENT_COUNTER,
+    CHANGE_COUNTER
+} from '../actions/counter.js';
 
 export default function counter(state = 0, actions) {
     switch (actions.type) {
@@ -21,9 +23,13 @@ export default function counter(state = 0, actions) {
             {
                 return state - 1
             }
+        case CHANGE_COUNTER:
+            {
+                return actions.index;
+            }
         default:
             {
-                return state
+                return state;
             }
     }
 }

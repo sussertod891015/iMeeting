@@ -1,11 +1,12 @@
 /*
  * @Author: Sussertod
- * @Date:   2016-09-05 13:13:56
+ * @Date:   2016-09-05 14:59:01
  * @Last Modified by:   Sussertod
- * @Last Modified time: 2016-09-05 13:44:36
+ * @Last Modified time: 2016-09-05 15:30:59
  */
 
 'use strict';
+
 import React, {
     Component,
     PropTypes
@@ -17,16 +18,23 @@ export default class Counter extends Component {
         const {
             increment,
             decrement,
+            change,
             counter
         } = this.props;
         //渲染组件，包括一个数字，四个按钮
+        //
+        const btnStyle = {
+            border: '1px solid #000',
+            margin: '0 5px'
+        };
         return (
             <p>
                 Clicked: {counter} times
                 {' '}
-                <button onClick={increment}>+</button>
+                <button onClick={increment} style={btnStyle}>+</button>
                 {' '}
-                <button onClick={decrement}>-</button>
+                <button onClick={decrement} style={btnStyle}>-</button>
+                <button onClick={()=>change(5)} style={btnStyle}>changeTo5</button>
             </p>
         )
     }
@@ -36,6 +44,7 @@ Counter.propTypes = {
     //increment必须为fucntion,且必须存在
     increment: PropTypes.func.isRequired,
     decrement: PropTypes.func.isRequired,
+    change: PropTypes.func.isRequired,
     //counter必须为数字，且必须存在
     counter: PropTypes.number.isRequired
 };
