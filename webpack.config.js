@@ -2,7 +2,7 @@
  * @Author: sussertod
  * @Date:   2016-08-17 09:18:21
  * @Last Modified by:   Sussertod
- * @Last Modified time: 2016-09-02 12:42:31
+ * @Last Modified time: 2016-09-05 18:49:26
  */
 
 'use strict';
@@ -27,7 +27,7 @@ module.exports = {
     },
     //enable dev source map
     devtool: 'eval-source-map',
-    // //enable dev server
+    //enable dev server
     devServer: {
         historyApiFallback: true,
         inline: true,

@@ -2,7 +2,7 @@
  * @Author: Sussertod
  * @Date:   2016-09-05 14:59:01
  * @Last Modified by:   Sussertod
- * @Last Modified time: 2016-09-05 15:30:59
+ * @Last Modified time: 2016-09-06 22:56:28
  */
 
 'use strict';
@@ -11,6 +11,9 @@ import React, {
     Component,
     PropTypes
 } from 'react'
+import {
+    Log
+} from '../../Utils/Utils'
 
 export default class Counter extends Component {
     render() {

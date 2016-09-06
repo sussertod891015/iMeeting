@@ -2,7 +2,7 @@
  * @Author: Sussertod
  * @Date:   2016-09-05 14:59:34
  * @Last Modified by:   Sussertod
- * @Last Modified time: 2016-09-05 15:01:56
+ * @Last Modified time: 2016-09-06 23:19:59
  */
 
 'use strict';
@@ -15,9 +15,13 @@ import {
 } from 'react-redux'
 import Counter from '../components/Counter'
 import * as CounterActions from '../actions/counter'
+import {
+    Log
+} from '../../Utils/Utils'
 
 //将state.counter绑定到props的counter
 function mapStateToProps(state) {
+    Log(state);
     return {
         counter: state.counter
     }
