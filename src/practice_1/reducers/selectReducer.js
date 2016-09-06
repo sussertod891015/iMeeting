@@ -2,7 +2,7 @@
  * @Author: Sussertod
  * @Date:   2016-09-05 18:59:48
  * @Last Modified by:   Sussertod
- * @Last Modified time: 2016-09-06 23:39:43
+ * @Last Modified time: 2016-09-07 00:51:32
  */
 
 'use strict';
@@ -27,17 +27,13 @@ export default function value(state = initialState, actions) {
     switch (actions.type) {
         case CHOOSE_VALUE:
             {
-                // return {
-                //     value: actions.value
-                // }
-                return Object.assign({}, {
+                return {
+                    ...state,
                     value: actions.value
-                });
-                // return [
-                //     ...state, {
-                //         value: actions.value
-                //     }
-                // ]
+                }
+                // return Object.assign({}, {
+                //     value: actions.value
+                // });
             }
         default:
             {
