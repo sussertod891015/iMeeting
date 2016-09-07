@@ -96,13 +96,17 @@ import {
     Provider
 } from 'react-redux'
 import App from './practice_1/containers/App'
+import DevTools from './practice_1/containers/DevTools'
 import configureStore from './practice_1/store/configureStore'
 
 const store = configureStore();
 
 render(
     <Provider store={store}>
-        <App />
+        <div>
+            <App />
+            <DevTools />
+        </div>
     </Provider>,
     document.getElementById('app')
 )
