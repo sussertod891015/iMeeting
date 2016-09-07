@@ -1,3 +1,10 @@
+/*
+ * @Author: Sussertod
+ * @Date:   2016-09-07 11:29:26
+ * @Last Modified by:   Sussertod
+ * @Last Modified time: 2016-09-07 18:09:35
+ */
+
 import React from 'react';
 import {
     createDevTools
@@ -6,8 +13,7 @@ import LogMonitor from 'redux-devtools-log-monitor';
 import DockMonitor from 'redux-devtools-dock-monitor';
 
 export default createDevTools(
-    <DockMonitor toggleVisibilityKey='ctrl-h'
-               changePositionKey='ctrl-q'>
+    <DockMonitor toggleVisibilityKey='ctrl-h' changePositionKey='ctrl-q'>
     <LogMonitor />
   </DockMonitor>
 );
