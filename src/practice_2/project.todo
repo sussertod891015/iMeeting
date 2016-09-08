@@ -1,0 +1,10 @@
+Project:
+  practice_2
+
+Archive:
+  ✔ 实现根据选择option来显示对应图片 @created(16-09-07 18:59) @done (16-09-08 17:28)
+
+
+Think:
+  action type:
+    根据option获取需要展示UI的数据

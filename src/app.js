@@ -2,7 +2,7 @@
  * @Author: Sussertod
  * @Date:   2016-09-04 23:06:33
  * @Last Modified by:   Sussertod
- * @Last Modified time: 2016-09-06 23:21:38
+ * @Last Modified time: 2016-09-08 15:53:20
  */
 
 'use strict';
@@ -85,6 +85,35 @@ import 'normalize.css';
 /**
  * practice_1
  */
+// import {
+//     Log
+// } from './Utils/Utils';
+// import React from 'react'
+// import {
+//     render
+// } from 'react-dom'
+// import {
+//     Provider
+// } from 'react-redux'
+// import App from './practice_1/containers/App'
+// import DevTools from './practice_1/containers/DevTools'
+// import configureStore from './practice_1/store/configureStore'
+
+// window.store = configureStore();
+
+// render(
+//     <Provider store={store}>
+//         <div>
+//             <App />
+//             <DevTools />
+//         </div>
+//     </Provider>,
+//     document.getElementById('app')
+// )
+
+/**
+ * practice_2
+ */
 import {
     Log
 } from './Utils/Utils';
@@ -95,17 +124,15 @@ import {
 import {
     Provider
 } from 'react-redux'
-import App from './practice_1/containers/App'
-import DevTools from './practice_1/containers/DevTools'
-import configureStore from './practice_1/store/configureStore'
+import App from './practice_2/containers/App'
+import configureStore from './practice_2/store/configureStore'
 
-const store = configureStore();
+window.store = configureStore();
 
 render(
     <Provider store={store}>
         <div>
             <App />
-            <DevTools />
         </div>
     </Provider>,
     document.getElementById('app')

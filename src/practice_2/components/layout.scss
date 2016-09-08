@@ -1,0 +1,23 @@
+/*
+* @Author: Sussertod
+* @Date:   2016-09-08 16:51:36
+* @Last Modified by:   Sussertod
+* @Last Modified time: 2016-09-08 17:26:28
+*/
+
+$animals:(cat,dog,tiger,aigle,beer);
+
+.img{
+    width:300px;
+    height:200px;
+    margin: 20px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@each $name in $animals{
+    .animals-#{$name}{
+        background-image: url('../img/#{$name}.jpg');
+    }
+}
