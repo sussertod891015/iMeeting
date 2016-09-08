@@ -1,27 +1,29 @@
 /*
  * @Author: Sussertod
- * @Date:   2016-09-06 13:11:53
+ * @Date:   2016-09-08 11:10:56
  * @Last Modified by:   Sussertod
- * @Last Modified time: 2016-09-08 14:32:42
+ * @Last Modified time: 2016-09-08 16:38:37
  */
 
 'use strict';
 
 import {
     bindActionCreators
-} from 'redux'
+} from 'redux';
 import {
     connect
 } from 'react-redux'
-import Selecter from '../components/Selecter'
-import * as SelecterActions from '../actions/selectAction'
+import Selecter from '../components/ChooseImg'
+import * as SelecterActions from '../actions/choose'
 import {
     Log
 } from '../../Utils/Utils'
 
+
+//这里只是绑定
 function mapStateToProps(state) {
     return {
-        value: state.value
+        chooseImg: state.chooseImg
     }
 }
 

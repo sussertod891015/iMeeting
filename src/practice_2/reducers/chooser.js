@@ -1,36 +1,31 @@
 /*
  * @Author: Sussertod
- * @Date:   2016-09-05 18:59:48
+ * @Date:   2016-09-07 23:00:01
  * @Last Modified by:   Sussertod
- * @Last Modified time: 2016-09-08 14:32:22
+ * @Last Modified time: 2016-09-08 16:41:32
  */
 
 'use strict';
 
 import {
-    CHOOSE_VALUE
-} from '../actions/selectAction';
-import {
     Log
-} from '../../Utils/Utils';
-
-/**
- * reducer指明应该如何更新state
- * @type {[type]}
- */
+} from '../../Utils/Utils'
+import {
+    CHOOSE_VALUE
+} from '../actions/choose';
 
 const initialState = {
-    value: 99
+    data: 0
 };
 
 
 
-export default function value(state = initialState, actions) {
+export default function chooseImg(state = initialState, actions) {
     switch (actions.type) {
         case CHOOSE_VALUE:
             {
                 return {
-                    value: actions.value
+                    data: actions.data
                 }
                 // return Object.assign({}, {
                 //     value: actions.value

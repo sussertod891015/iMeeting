@@ -1,8 +1,8 @@
 /*
  * @Author: Sussertod
- * @Date:   2016-09-06 13:09:01
+ * @Date:   2016-09-07 23:16:14
  * @Last Modified by:   Sussertod
- * @Last Modified time: 2016-09-08 14:32:51
+ * @Last Modified time: 2016-09-08 17:27:43
  */
 
 'use strict';
@@ -16,7 +16,11 @@ import ReactDOM, {
 } from 'react-dom';
 import {
     Log
-} from '../../Utils/Utils'
+} from '../../Utils/Utils';
+import {
+    imgData
+} from '../data/imgData';
+import imgstyle from './layout.scss';
 
 export default class Selecter extends Component {
     getOption(dispatch_ = () => {}) {
@@ -33,7 +37,7 @@ export default class Selecter extends Component {
     }
     render() {
         const {
-            value,
+            chooseImg,
             choose
         } = this.props;
         const style = {
@@ -43,7 +47,8 @@ export default class Selecter extends Component {
             backgroundColor: '#000',
             color: '#fff'
         }
-        Log(value, '---from render');
+        const animalsName = imgData[chooseImg['data']]['name'];
+        const className = imgstyle.img + ' ' + imgstyle['animals-' + animalsName];
         return (
             <div>
                 <select name="select" ref="select" id="select" style={style} onChange={()=>this.getOption(choose)}>
@@ -53,7 +58,8 @@ export default class Selecter extends Component {
                     <option value="3">3</option>
                     <option value="4">4</option>
                 </select>
-                <div>{value.value}</div>
+                <h1 style={{textAlign:'center'}}>{animalsName}</h1>
+                <div className={className}></div>
             </div>
         );
     }
