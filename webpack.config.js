@@ -2,7 +2,7 @@
  * @Author: sussertod
  * @Date:   2016-08-17 09:18:21
  * @Last Modified by:   Sussertod
- * @Last Modified time: 2016-09-05 18:49:26
+ * @Last Modified time: 2016-09-09 11:28:44
  */
 
 'use strict';
@@ -30,6 +30,7 @@ module.exports = {
     //enable dev server
     devServer: {
         historyApiFallback: true,
+        host: '10.244.138.25',
         inline: true,
         progress: true
     },

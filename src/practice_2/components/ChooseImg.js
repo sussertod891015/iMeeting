@@ -2,7 +2,7 @@
  * @Author: Sussertod
  * @Date:   2016-09-07 23:16:14
  * @Last Modified by:   Sussertod
- * @Last Modified time: 2016-09-08 17:27:43
+ * @Last Modified time: 2016-09-09 00:07:37
  */
 
 'use strict';
@@ -27,12 +27,21 @@ export default class Selecter extends Component {
         let vDOM = this.refs.select;
         let valueTxt;
         let DOM = ReactDOM.findDOMNode(vDOM);
-        for (let i of DOM.children) {
-            if (i.selected) {
-                valueTxt = i.innerHTML;
+        // for (let i of DOM.children) {
+        for (let i = 0, len = DOM.children.length; i < len; i++) {
+            if (DOM.children[i].selected) {
+                valueTxt = DOM.children[i].innerHTML;
                 break;
             }
         }
+
+        // Log(DOM.children);
+        // 不能对DOM进行for of
+        // 下面编译后在微信中会报错
+        // for (let a of DOM.children) {
+        // Log(a);
+        // }
+
         dispatch_(valueTxt);
     }
     render() {
