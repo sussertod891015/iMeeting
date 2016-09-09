@@ -2,7 +2,7 @@
  * @Author: Sussertod
  * @Date:   2016-09-04 23:06:33
  * @Last Modified by:   Sussertod
- * @Last Modified time: 2016-09-09 11:31:13
+ * @Last Modified time: 2016-09-09 12:20:19
  */
 
 'use strict';
@@ -116,7 +116,7 @@ import 'normalize.css';
  */
 
 import {
-    Log
+    log
 } from './Utils/Utils';
 import React from 'react'
 import {
@@ -128,7 +128,7 @@ import {
 import App from './practice_2/containers/App'
 import configureStore from './practice_2/store/configureStore'
 
-window.store = configureStore();
+let store = configureStore();
 
 render(
     <Provider store={store}>
