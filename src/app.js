@@ -114,27 +114,48 @@ import 'normalize.css';
 /**
  * practice_2
  */
+// import {
+//     log
+// } from './Utils/Utils';
+// import React from 'react'
+// import {
+//     render
+// } from 'react-dom'
+// import {
+//     Provider
+// } from 'react-redux'
+// import App from './practice_2/containers/App'
+// import configureStore from './practice_2/store/configureStore'
 
+// let store = configureStore();
+
+// render(
+//     <Provider store={store}>
+//         <div>
+//             <App />
+//         </div>
+//     </Provider>,
+//     document.getElementById('app')
+// )
+
+/**
+ * practice_3
+ */
 import {
     log
-} from './Utils/Utils';
-import React from 'react'
-import {
+} from './Utils/Utils'
+import React, {
+    Component
+} from 'react'
+import ReactDOM, {
     render
-} from 'react-dom'
+} from 'react-dom';
 import {
-    Provider
-} from 'react-redux'
-import App from './practice_2/containers/App'
-import configureStore from './practice_2/store/configureStore'
+    Router,
+    Route,
+    Link
+} from 'react-router'
 
-let store = configureStore();
+import App from './practice_3/App'
 
-render(
-    <Provider store={store}>
-        <div>
-            <App />
-        </div>
-    </Provider>,
-    document.getElementById('app')
-)
+render(<App></App>, document.getElementById('app'));
