@@ -2,7 +2,7 @@
  * @Author: Sussertod
  * @Date:   2016-09-04 23:06:33
  * @Last Modified by:   Sussertod
- * @Last Modified time: 2016-09-09 12:20:19
+ * @Last Modified time: 2016-09-09 17:46:13
  */
 
 'use strict';
@@ -153,9 +153,26 @@ import ReactDOM, {
 import {
     Router,
     Route,
-    Link
+    Link,
+    hashHistory,
+    Redirect,
+    IndexRoute
 } from 'react-router'
-
 import App from './practice_3/App'
+import About from './practice_3/About'
+import Inbox from './practice_3/Inbox'
+import Message from './practice_3/Message'
+import Dashboard from './practice_3/Dashboard'
 
-render(<App></App>, document.getElementById('app'));
+render(
+    <Router history={hashHistory}>
+        <Route path="/" component={App}>
+            <IndexRoute component={Dashboard} />
+            <Route path="about" component={About} />
+            <Route path="inbox" component={Inbox}>
+                <Route path="/messages/:id" component={Message}>
+                    <Redirect from="messages/:id" to="/messages/:id" />
+                </Route>
+            </Route>
+        </Route>
+    </Router>, document.getElementById('app'));
